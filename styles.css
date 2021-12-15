@@ -8,19 +8,42 @@ body, html, h1 {
 }
 
 body { 
-  /* background-color: var(--dark-blue);  */
   font-family: 'Comic Sans MS';
+  background-color: var(--dark-blue); 
+  color: #d8dee9; 
 }
 
-.container {
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-.shelf {
+#shelf {
   border: solid black .2rem;
+  min-height: 50vh;
+  min-width: 50vh;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.book {
+  text-align: center;
 }
 
 .input-form {
   display: none;
   border: solid black .2rem;
+  margin: 2rem;
+}
+
+.add-btn {
+  font-family: inherit;
+  font-weight: bold;
+  border: solid black .2rem;
+  border-radius: .4rem;
 }
