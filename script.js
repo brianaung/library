@@ -1,6 +1,6 @@
 let myLibrary = [];
 
-const shelf = document.querySelector('.shelf');
+const shelf = document.getElementById('shelf');
 const addBtn = document.querySelector('.add-btn');
 const inputForm = document.querySelector('.input-form');
 
@@ -62,6 +62,7 @@ function displayBook() {
   // add the books inside the array to the shelf div
   myLibrary.forEach(book => {
     const b = document.createElement('div');
+    b.classList.add("book");
     b.textContent = `${book.author}, ${book.title}, ${book.numPg}`;
     shelf.appendChild(b);
   });
