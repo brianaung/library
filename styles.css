@@ -8,7 +8,7 @@ body, html, h1 {
 }
 
 body { 
-  background-color: var(--dark-blue); 
+  /* background-color: var(--dark-blue);  */
   font-family: 'Comic Sans MS';
 }
 
@@ -17,5 +17,10 @@ body {
 }
 
 .shelf {
+  border: solid black .2rem;
+}
+
+.input-form {
+  display: none;
   border: solid black .2rem;
 }
