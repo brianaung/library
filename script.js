@@ -5,18 +5,26 @@ const addBtn = document.querySelector('.add-btn');
 const inputForm = document.querySelector('.input-form');
 
 class Book {
+  #author;
+  #title;
+  #numPg;
+
   constructor(author, title, numPg) {
-    this.author = author;
-    this.title = title;
-    this.numPg = numPg;
+    this.#author = author;
+    this.#title = title;
+    this.#numPg = numPg;
   }
+
+  get author() { return #author; }
+  get title() { return #title; }
+  get numPg() { return #numPg; }
 
   isInLib() {
     for (let i=0; i < myLibrary.length; i++) {
       const book = myLibrary[i];
-      if (book.author === this.author && 
-          book.title === this.title && 
-          book.numPg === this.numPg) {
+      if (book.#author === this.#author && 
+          book.#title === this.#title && 
+          book.#numPg === this.#numPg) {
         return true;
       }
     }
@@ -33,7 +41,7 @@ class Book {
     myLibrary.forEach(book => {
       const b = document.createElement('div');
       b.classList.add("book");
-      b.textContent = `${book.author}, ${book.title}, ${book.numPg}`;
+      b.textContent = `${book.#author}, ${book.#title}, ${book.#numPg}`;
       shelf.appendChild(b);
     });
   }
